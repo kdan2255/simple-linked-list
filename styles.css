@@ -1,0 +1,53 @@
+body{
+    background-color: #fafafa;
+    font-family:Helvetica,sans-serif;
+    text-shadow: .05em .05em 0 rgba(0,0,0,0.1);
+
+}
+#inputext{
+    padding: 5px;
+
+border: 0;
+box-shadow:0 0 10px 2px rgba(0,0,0,0.2);
+border-radius:20px;
+}
+#enterbutton{
+
+
+    box-shadow:0 0 10px 2px rgba(0,0,0,0.1);
+    border-radius:20px;
+}
+#randombutton{
+  
+
+box-shadow:0 0 10px 2px rgba(0,0,0,0.1);
+border-radius:20px;
+}
+.NodeCircle{
+    background-color: #cfcfcf;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 0.5%;
+    margin: 1%;
+    box-shadow:0 0 10px 1px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+#container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nodebutton{
+box-shadow:0 0 10px 2px rgba(0,0,0,0.1);
+border-radius:20px;
+
+}
