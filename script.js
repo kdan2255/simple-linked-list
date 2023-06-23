@@ -99,6 +99,7 @@ let RandomValue;
 const Container=document.getElementById('container');
 
 function CreateNode(InputText){
+
 let reg = new RegExp("^([1-9][0-9]?|100)$");
 
 if(reg.test(InputText)==false){
@@ -109,14 +110,14 @@ const TextNode = document.createTextNode(InputText);
 const Buttonorb = document.createElement("button");
 const Buttontext = document.createTextNode("remove");
 const PointerNode = document.createElement("img");
-//PointerNode.setAttribute("src","pointer.png");
+PointerNode.setAttribute("src","pointer.png");
 Buttonorb.setAttribute("class","nodebutton");
 Buttonorb.appendChild(Buttontext);
 DivNode.appendChild(TextNode);
 DivNode.appendChild(Buttonorb);
 DivNode.setAttribute("class","NodeCircle");
 Container.appendChild(DivNode);
-//Container.appendChild(PointerNode);
+Container.appendChild(PointerNode);
 
 }
 }
@@ -157,11 +158,17 @@ document.getElementById('enterbutton').onclick=()=>{
     }   
 
 document.getElementById('container').addEventListener('click',event =>{
+let sibling;
 let nodalvalue;
 let nodalnumber;
 const targett = event.target;
 if(targett.matches('.nodebutton')){
-Container.removeChild(targett.parentNode);
+    sibling=targett.parentNode.nextElementSibling;
+    Container.removeChild(targett.parentNode);
+    Container.removeChild(sibling);
+
+
+
 
 }
 nodalvalue=targett.parentNode.textContent;
